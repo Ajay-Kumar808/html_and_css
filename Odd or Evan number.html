@@ -1,0 +1,44 @@
+<html>
+    <head>
+<style>
+    #box1{
+        width: 200px;
+        height: 250px;
+        background-color: rgb(241, 219, 189);
+        
+    }
+    #box2{
+        width: 100px;
+        height: 200px;
+        background-color: rgb(226, 167, 89);
+        border: 1.4px solid red;
+        margin-top: 50px;
+    
+    }
+</style>
+    </head>
+    <body>
+        <div id="box1">
+  <div id="box2">
+<h3>Even or Odd number</h3>
+<input type="number" id="t1"><br><br>
+<button onclick="para()">Check</button>
+<p id="result">Result</p>
+  </div>
+        </div>
+        <script>
+            function para(){
+                var a = t1.value;
+                a = parseInt(a);
+                 
+                if(a%2 ==0){
+                      result.innerHTML += a+ "even";
+                    }
+             	else{
+	           result.innerHTML +=a + "odd";
+	           }
+            //    result.innerHTML +=parseInt(a);
+            }
+        </script>
+    </body>
+</html>

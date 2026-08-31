@@ -1,0 +1,41 @@
+<html>
+    <head>
+      <style>
+        #box1{
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            animation-name: myanimation;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            animation-duration: 6s;     /*delay*/
+        }
+        @keyframes myanimation {
+            0%{
+                transform: translate(0px, 0px) scale(1.5);
+                background-color: aqua;
+                
+            }
+             25%{
+                transform: translate(500px, 0px) scale(2);
+                background-color: black;
+            }
+             50%{
+                transform: translate(500px, 500px) scale(1.5);
+                background-color: brown;
+            }
+             75%{
+                transform: translate(0px, 500px)scale(2);
+                background-color: rgb(238, 238, 12);
+            }
+             100%{
+                transform: translate(0px, 0px) scale(1.5);
+                background-color: black;
+            } 
+        }
+      </style>
+    </head>
+    <body>
+        <div id="box1"></div>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+    <head>
+    <style>
+        .box{
+            width: 50px;
+            height: 50px;
+            /* background-color: red; */
+            border: 1px solid black;
+            border-radius: 50%;
+            margin: 10px;
+            float: left;
+        }
+    </style>
+    </head>
+    <body>
+        <h1>Generate Box</h1>
+        <input type="text" id="t1">
+        <button onclick="btn()"> Generate</button>
+        <button onclick="btn2()">Start</button>
+        <hr>
+
+         <!-- <div class="box"></div>     -->
+        <p id="para">
+
+        </p>
+        <script>
+            var mycolors = ["red", "yellow", "pink", "gold", "teal"];
+            var j = 0;
+            function btn(){
+               var total = parseInt(t1.value);
+               for(var i=1; i<=total; i++){
+                para.innerHTML += ` <div class="box" style="background-color: ${mycolors[j]};"></div>`;
+                j++;
+                if(j==mycolors.length){
+                    j=0;
+                }
+               }
+            }
+
+            function btn2(){
+                    para.innerHTML += ` <div class="box" style="background-color: ${mycolors[j]};"></div>`;
+                j++;
+                if(j==mycolors.length){
+                    j=0;
+                }
+                setTimeout(btn2, 200);
+            }
+        </script>
+    </body>
+</html>

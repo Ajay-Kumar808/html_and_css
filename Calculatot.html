@@ -1,0 +1,102 @@
+<html>
+    <head>
+     <style>
+        h1{
+            text-align: center;
+        }
+        table{
+            box-shadow: 0px 0px 20px gray;
+            padding: 20px;
+        }
+        button{
+            width: 50px;
+            height: 50px;
+            border: 0px;
+            background-color: white;
+            box-shadow: 0px 0px 10px gray;
+            border-radius: 10px;
+        }
+        input{
+            width: 100px;
+            height: 60px;
+            font-size: 25px;
+            text-align: right;
+            font-weight: bold;
+            border: 0px;
+            outline: 0px;
+
+        }
+        #btn1{
+            width: 100%;
+            background-color: beige;
+
+        }
+     </style>
+    </head>
+    <body>
+   <h1> DigiCoder Calculator</h1>
+   <table align="center" cellpadding="10px">
+    <tr>
+        <td colspan="4">
+            <input type="number" readonly id="t1">
+        </td>
+        
+    </tr>
+     <tr>
+        <td> <button onclick="clearbox()">C</button></td>
+        <td><button onclick="backpress()">&larr;</button></td>
+        <td><button onclick="mybtn('+')">+</button></td>
+        <td><button onclick="mybtn('-')">-</button></td>
+    </tr>
+     <tr>
+        <td><button onclick="mybtn(7)">7</button></td>
+        <td><button onclick="mybtn(8)">8</button></td>
+        <td><button onclick="mybtn(9)">9</button></td>
+        <td><button onclick="mybtn('*')">*</button></td>
+    </tr>
+     <tr>
+        <td><button onclick="mybtn(4)">4</button></td>
+        <td><button onclick="mybtn(5)">5</button></td>
+        <td><button onclick="mybtn(6)">6</button></td>
+        <td><button onclick="mybtn('/')">/</button></td>
+    </tr>
+     <tr>
+        <td><button onclick="mybtn(1)">1</button></td>
+        <td><button onclick="mybtn(2)">2</button></td>
+        <td><button onclick="mybtn(3)">3</button></td>
+        <td><button onclick="mybtn('%')">%</button></td>
+    </tr>
+     <tr>
+        <td><button onclick="mybtn(0)">0</button></td>
+        <td><button onclick="mybtn('.')">.</button></td>
+        <td colspan="2"><button id="btn1" onclick="result()">=</button></td>
+
+    </tr>
+   </table>
+   <script>
+    
+    function mybtn(x){
+        t1.value +=x;
+        //text to speech
+        const msp = new SpeechSynthesisUtterance(x);
+        window.speechSynthesis.speak(msp);
+    }
+    function result(){
+        var ans= eval(t1.value);
+        t1.value=ans;
+         const msp = new SpeechSynthesisUtterance(a);
+        window.speechSynthesis.speak(msp);
+    }
+    function clearbox(){
+        t1.value="";
+        const msp = new SpeechSynthesisUtterance("clear");
+        window.speechSynthesis.speak(msp);
+    }
+     function backpress(){
+        t1.value=t1.value.slice(0, -1);
+        const msg = new SpeechSynthesisUtterance("back")
+        window.speechSynthesis.speak(msg);
+    }
+   </script>
+    </body>
+</html>

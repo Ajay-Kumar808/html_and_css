@@ -1,0 +1,28 @@
+<html>
+    <head>
+     <style>
+        #box1{
+            width: 800px;
+            height: 400px;
+            background-color: rgb(171, 230, 230);
+        }
+     </style>
+    </head>
+    <body>
+        <div id="box1">
+            <h3> Text Case Converter</h3>
+             <textarea row="20" cols="30"></textarea>
+             <button onclick="para(str)" id="t1">UPPERCASE</button>
+            <button onclick="para()" id="t2">LOWERCASE</button>
+            <button onclick="para()" id="t3">Capitalize firsr letter</button>
+            <pi id="result">result=</p>
+        </div>
+        <script>
+            function para(str){
+            var a = (t1).value; 
+             let upperCase = (str.toUpperCase());            // result.innerHTML += a+ "even";
+            result.innerTHML+= (t1).value +  upperCase;   
+            }
+        </script>             
+    </body>
+</html>

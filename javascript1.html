@@ -1,0 +1,57 @@
+<html>
+    <head>
+          <script>
+            function sum (){
+                var a= t1.value;
+                 var b= t2.value;
+                a = parseInt(a);
+                b = parseInt(b);
+                 var c= a+b;
+                 ans.innerHTML +=c;
+            }
+             function sub (){
+                var a= t1.value;
+                 var b= t2.value;
+                a = parseInt(a);
+                b = parseInt(b);
+                 var c= a-b;
+                 ans.innerHTML +=c;
+            }
+             function mult (){
+                var a= t1.value;
+                 var b= t2.value;
+                a = parseInt(a);
+                b = parseInt(b);
+                 var c= a*b;
+                 ans.innerHTML +=c;
+            }
+             function div (){
+                var a= t1.value;
+                 var b= t2.value;
+                a = parseInt(a);
+                b = parseInt(b);
+                 var c= a/b;
+                 ans.innerHTML +=c;
+            }
+             function rem (){
+                var a= t1.value;
+                 var b= t2.value;
+                a = parseInt(a);
+                b = parseInt(b);
+                 var c= a%b;
+                 ans.innerHTML +=c;
+            }
+
+          </script>
+    </head>
+    <body>
+        <input type="text" id="t1"/>
+         <input type="text" id="t2"/>
+         <button onclick="sum()">Sum</button>
+          <button onclick="sub()">sub</button>
+           <button onclick="mult()">mult</button>
+            <button onclick="div()">div</button>
+             <button onclick="rem()">rem</button>
+         <h3 id="ans">Answer=</h3>
+    </body>
+</html>

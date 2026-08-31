@@ -1,0 +1,52 @@
+<html>
+    <head>
+   
+    </head>
+    <body>
+        <h1 align="center"> Calculator</h1>
+        <table border="1" align="center" cellpadding="10px">
+            <tr>
+                <td colspan="4">
+                    <input type="number" id="t1" readonly>
+                </td>
+                  
+            </tr>
+              <tr >
+                <td>C</td>
+                  <td>&larr;</td>
+                    <td> <button onclick="btn('%')">%</button></td>
+                    <td onclick="btn()">/</td>
+            </tr>
+              <tr>
+                <td> <button onclick="btn(7)">7</button></td>
+                  <td><button onclick="btn(8)">8</button></td>
+                    <td onclick="btn()">9</td>
+                    <td onclick="btn()">*</td>
+            </tr>
+              <tr>
+                <td onclick="btn()">4</td>
+                  <td onclick="btn()">5</td>
+                    <td onclick="btn()">6</td>
+                    <td onclick="btn()">-</td>
+            </tr>
+              <tr>
+                <td onclick="btn()">1</td>
+                  <td onclick="btn()">2</td>
+                    <td onclick="btn()">3</td>
+                    <td onclick="btn()">+</td>
+            </tr>
+              <tr>
+                <td onclick="btn()">0</td>
+                  <td onclick="btn()">.</td>
+                    <td colspan="2">=</td>
+                    <!-- <p id="ans"></p> -->
+            </tr>
+        </table>
+        <script>
+            function btn(x){
+               t1.value +=x;
+            }
+        </script>
+
+    </body>
+</html>

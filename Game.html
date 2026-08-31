@@ -1,0 +1,95 @@
+<html>
+    <head>
+<style>
+    table tr td{
+      width: 150px;
+      height: 150px;
+      background-color: beige;
+      font-size: 100px;
+      color:red;
+      font-weight: bold;
+      text-align: center;
+      /* cursor: pointer */
+    }
+    table, tr, td{
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    
+</style>
+
+    </head>
+    <body>
+        <h1>DigiCoders -- tic tac toe</h1>
+        <table>
+            <tr>
+                <td onclick="tap(this, 0)"></td>
+                  <td onclick="tap(this, 1)"></td>
+                    <td onclick="tap(this, 2)"></td>
+            </tr>
+              <tr>
+                <td onclick="tap(this, 3)"></td>
+                  <td onclick="tap(this, 4)"></td>
+                    <td onclick="tap(this, 5)"></td>
+            </tr>
+              <tr>
+                <td onclick="tap(this, 6)"></td>
+                  <td onclick="tap(this, 7)"></td>
+                    <td onclick="tap(this, 8)"></td>
+            </tr>
+        </table>
+        <h1 id="hint>"></h1>
+        <button onclick="window.location.reload">Restart Game</button>
+        <!-- <audio src="turnsound.wav" id="sound1"> </audio> -->
+         <!-- <audio src="turnsound.wav" id="sound2"> </audio> -->
+        <script>
+            var turn = 1;
+            var gamestatus =[0,0,0,0,0,0,0,0,0];
+            var winposition = [ [0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8,], [2,4,6,]]
+            
+            function tap(e, i){          //i=index value,,  e=element
+                // alert(i);
+                if(turn==1 && gamestatus[i]==0){
+                    e.innerHTML = "X";
+                    // sound1.play();
+                    gamestatus[i] = 1;
+                    turn = 2;
+                }
+                  else if(turn==2 && gamestatus[i]==0){
+                    e.innerHTML = "O";
+                    //  sound1.play();
+                    gamestatus[i] = 2;
+                    turn = 1;
+                  }
+                  checkwinner();
+            }
+            function checkwinner(){
+                var winner = 0;
+                for(pos of winposition ){
+                    if(gamestatus[pos[0]] == gamestatus[pos[1]] && gamestatus[pos[1]] == gamestatus[pos[2]] && gamestatus[pos[0]] !=0)
+                {
+                    winner = gamestatus[pos[0]];
+                    turn=0;
+                }
+                }
+                if(winner==1){
+                    hint.innerHTML = "X Player WON";
+                    // sound2.play();
+                    document.querySelector("body").style.backgroundImage = "url('https://media.istockphoto.com/id/530939998/vector/realistic-colorful-fireworks.jpg?s=612x612&w=0&k=20&c=9mMKRpjdwExw1iuijyg7B_rF9bj_Uhss-yPSMUJu1rg=')";
+                
+                }
+                else if(winner==2){
+                    hint.innerHTML = "O Player WON";
+                    // sound2.play();
+                      document.querySelector("body").style.backgroundImage = "url('https://media.istockphoto.com/id/530939998/vector/realistic-colorful-fireworks.jpg?s=612x612&w=0&k=20&c=9mMKRpjdwExw1iuijyg7B_rF9bj_Uhss-yPSMUJu1rg=')";
+                }
+                //Check draw
+                if(winner==0){
+                   if( ! gamestatus.includes(0)){
+                    hint.innerHTML = "Game Over - Game Draw";
+                   }
+                }
+            }
+        </script>
+    </body>
+</html>

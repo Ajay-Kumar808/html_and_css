@@ -1,0 +1,63 @@
+<html>
+    <head>
+           <style>
+                #menu1{
+                    padding: 0px;
+                    position: relative;
+                }
+                #menu1>li{
+                    display: inline-block;
+                    /* list-style-type: none; */
+
+                }
+                #menu1>li>a{
+                    border: 1px solid black;
+                    text-decoration: none;
+                    padding: 5px;
+                }
+                .menu2{
+                    padding: 0px;
+                    position: absolute;
+                    display: none;
+                }
+                .menu2>li>a {
+                    text-decoration: none;
+                    padding: 5px;
+                    border: 1px solid black;
+                }
+                .menu2>li{
+                    list-style-type: none;
+                    margin-top: 10px;
+                }
+                #menu1>li:hover .menu2{
+                    display: block;
+                }
+                .menu2>li>a:hover{
+                    background-color: red;
+                }
+                 #menu1>li>a:hover{
+                    background-color: rgb(14, 187, 49);
+                }
+           </style>
+    </head>
+    <body>
+        <h1 style="color:red;">Navigation \ Menu</h1>
+        <ul id="menu1">
+            <li> <a href="#">Home</a></li>
+             <li> <a href="#">About</a></li>
+              <li> <a href="#">Logic</a>
+            <ul class="menu2">
+                <li><a href="#">Student Login</a></li>
+                 <li><a href="#">Teacher Login</a></li>
+            </ul>
+            </li>
+               <li> <a href="#">Gallery</a>
+              <ul class="menu2">
+                <li><a href="#">Photo</a></li>
+                 <li><a href="#">Video</a></li>
+            </ul>
+            </li>
+                <li> <a href="#">Contact</a></li>
+        </ul>
+    </body>
+</html>

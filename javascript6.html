@@ -1,0 +1,37 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="box1">
+            <h1>Age Calculator</h1>
+            enter your dob <br><br>
+            <input type="date" id="t1"><br>
+        <button onclick="age()">Calculate Age</button>
+        <br>
+        <p id="result">your age = </p>
+        </div>
+      <script>
+        function age(){
+            var date1 = new Date();
+            var date2 = new Date(t1.value);
+
+            var diff = date1 - date2;
+
+            var days = diff/ (1000*60*60*24);
+
+            // days = parseInt(days);
+            year = days / 365;
+            days = days % 365;                                                                                                                                                                                                                                          nnnn                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+            months = days / 30;
+            days = days % 30;
+              days = parseInt(days);
+              // parseInt(year) + "years," + parseInt(months) +"months";
+           
+            result.innerHTML +=  parseInt(year);
+             
+        
+        }
+      </script>
+    </body>
+</html>

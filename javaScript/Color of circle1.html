@@ -1,0 +1,34 @@
+<html>
+    <head>
+   <style>
+    .box1{
+        width: 50px;
+        height: 50px;
+        /* background-color: red; */
+        border: 1px solid black;
+        border-radius: 50%;
+        float: left;
+        margin: 10px;
+    }
+   </style>
+    </head>
+    <body>
+        <input type="text" id="t1">
+        <button onclick="btn()">Generate</button>
+       
+        <hr>
+         <p id="para"></p>
+        <!-- <div class="box1"></div> -->
+        <script>
+          var  mycolor = ["red", "pink", "yellow", "blue","green"];
+          var j=0;
+            function btn(){
+                var total = parseInt(t1.value);
+                for(var i=1; i<=total; i++){
+                    para.innerHTML += `<div class="box1" style="background-color: ${mycolor[j]};"></div> `;
+                    j++;
+                }
+            }
+        </script>
+    </body>
+</html>

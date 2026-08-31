@@ -1,0 +1,43 @@
+<html>
+    <head>
+       <style>
+        body{
+            background-color: blue;
+        }
+        #box1{
+            width: 150px;
+            height: 200px;
+            background-color: white;
+            text-align: center;
+        }
+        #t1{
+            width: 120px;
+            margin-left: 10px;
+            border-radius: 20px;
+            
+        }
+        #a1{
+            border-radius: 20px;
+        }
+       </style>
+    </head>
+    <body>
+        <div id="box1">
+             <h3>Fahrenheit to Celsius</h3><br>
+             <input type="number" id="t1"><br><br>
+             <button id="a1" onclick="convert()">Convert</button>
+             <p id="result">F TO C</p>
+
+        </div>
+       <script>
+        function convert(){
+           var a = t1.value;
+           a = parseInt(a);
+           
+            var b = (a-32)*5/9;
+          result.innerHTML = t1.value+"f=" +b+ "c";  
+        }
+
+       </script>
+    </body>
+</html>
