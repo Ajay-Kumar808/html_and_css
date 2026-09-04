@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        #card-container{
+            margin: 100px auto;
+            height: 300px;
+            width: 500px;
+            perspective: 1000px;
+           
+             
+        }
+        #card{
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+            position: relative;
+            transform-style: preserve-3d;
+            transition:  all 1s ease;
+           
+
+        }
+        .card-face{
+            background-color: darkblue;
+            height: 100%;
+            width: 100%;
+            border-radius: 20px;
+            color: white;
+            padding: 30px;
+           position: absolute;
+           backface-visibility: hidden;
+          
+             
+        }
+        .front{
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCOsE4D359tUCgRmzqQGkRBRBM5kEWQsfKqclONr0rDg&s=10');
+            background-size: cover;
+        }
+        .front h1{
+            font-size: 40px;
+            
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: normal;
+        }
+        #chip{
+            width: 70px;
+            height: 50px;
+            background-color: aqua;
+            border-radius: 10px;
+            margin-left: 10px;
+            background-image: url('https://t3.ftcdn.net/jpg/01/22/06/72/360_F_122067245_li2zr9npi1aZZ6dto4SNgxAFKt302X7d.jpg');
+            background-size: 100% 100%;
+        }
+        #card-number{
+            font-size: 30px;
+            text-align: center;
+            margin-top: 10px;
+        }
+        #expiry{
+            display: flex;
+            align-items: self-end;
+            justify-content: flex-end;
+            flex-direction: column;
+            margin-right: 30px;
+        }
+          
+        #holder-name{
+            font-size: 30px;
+            margin-left: 25px;
+        }
+        #card-container:hover #card{
+            transform: rotateY(180deg);
+        }
+        .back{
+            transform: rotateY(180deg);
+              background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCOsE4D359tUCgRmzqQGkRBRBM5kEWQsfKqclONr0rDg&s=10');
+            background-size: cover;
+        }
+        #black-strip{
+            width: 100%;
+            height: 50px;
+            background-color: black;
+            position: absolute;
+            margin-top: 5px;
+            left: 0px;
+        }
+        #cvv-holder{
+            width: 100%;
+            height: 40px;
+            background-color: white;
+          display: flex ;
+            margin-top: 60px;
+           
+
+           
+        }
+        #liner-strip{
+            width: 75%;
+            height: 100%;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRymVtzTj85YRa0hQO31RNYsxXoqgn3OHw-ZBnOS7QOow&s=10');
+            
+        }
+        #cvv{
+            color: black;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+           margin-left: 30px;
+        }
+        .para{
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="card-container">
+        <div id="card">
+            <!-- Front face -->
+
+             <div class="card-face front">
+            <h1>Children's Bank of India</h1> 
+            <div id="chip"></div>
+            <div id="card-number"> 1234 &emsp; 5678 &emsp; 1234</div>   
+            <div id="expiry">
+                <span>EXPIRES 0N</span>
+                <h3>01/2028</h3>
+            </div>
+            <h2 id="holder-name">Ajay Sah</h2>
+
+            </div>
+
+             <!-- back face -->
+              <div class="card-face back">
+               <p id="customer-care"> For customer service call +91 8858515149</p>
+               <div id="black-strip"></div>
+               <div id="cvv-holder">
+                <div id="liner-strip"></div>
+                <div id="cvv">755</div>
+               </div>
+               <p class="para">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum adipisci harum reiciendis illo sunt quam labore beatae dolores numquam, molestiae iste optio unde eos .
+               </p>
+               <p class="para">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore obcaecati doloribus sint maxime. Architecto adipisci officiis accusamus. Inventore placeat, perferendis dicta obcaecati impedit?
+               </p>
+              </div>
+        </div>
+    </div>
+</body>
+</html>
